@@ -11,6 +11,7 @@ if os.path.isfile('save.txt'):
         tempApps = tempApps.split(',')
         apps = [x for x in tempApps if x.strip()]
 
+#be sure to patch the commands back to the framework and buttons because without mentioning that it wont work
 def addApp():
 
     for widget in Frame.winfo_children():
@@ -32,6 +33,7 @@ def closeapp():
     for j in Frame:
         apps.clear()    
 
+#this is the framework for the app, i.e. what the user sees        
 Canvas = tk.Canvas(root, height=500, width=600, bg='#000000')
 Canvas.pack()
 
